@@ -1,6 +1,10 @@
 # Spiralyze
 
-## API DOCUMENTATION
+## Image Gallery
+
+Image Gallery can be found [here](https://spiralyze.herokuapp.com/)
+
+## BACKEND API DOCUMENTATION
 
 Base URl : https://spiralyze.herokuapp.com/
 
