@@ -5,7 +5,6 @@ import { Product } from "../models";
 async function create(req, res, next) {
   try {
     const product = new Product(req.body);
-    product.slug = slug(product.name);
 
     await product.save();
 

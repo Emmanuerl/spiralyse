@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { slug } from "../utilities";
 
 const schema = new mongoose.Schema(
   {
@@ -16,7 +17,11 @@ const schema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
+
+schema.pre("validate", function () {
+  this.slug = slug(this.name);
+});
 
 export const Product = mongoose.model("products", schema);
