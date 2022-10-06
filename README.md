@@ -42,7 +42,7 @@ request payload (body)
 
 - DELETE /api/v1/products/{id} - delete product
 
-```json
+```
 request payload (body)
 {}
 ```
