@@ -5,7 +5,7 @@ import { Product } from "../models";
 async function create(req, res, next) {
   try {
     const product = new Product(req.body);
-
+    product.slug = slug(product.name);
     await product.save();
 
     return res.json(product);
@@ -43,9 +43,7 @@ async function list(req, res) {
 
 async function update(req, res, next) {
   try {
-    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
+    const product = await Product.findById(req.params.id);
     if (!product) {
       return next(
         new ApplicationError(
@@ -54,9 +52,15 @@ async function update(req, res, next) {
         )
       );
     }
+
+    product.name = req.body.name ?? product.name;
+    product.price = req.body.price ?? product.price;
+    product.slug = slug(product.name);
+    await product.save();
+
     return res.json(product);
   } catch (err) {
-    if (err.code === "11000") {
+    if (err.code === 11000) {
       return next(
         new ApplicationError(
           409,
@@ -64,6 +68,7 @@ async function update(req, res, next) {
         )
       );
     }
+    return next(err);
   }
 }
 

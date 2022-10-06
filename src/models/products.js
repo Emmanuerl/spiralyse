@@ -20,8 +20,4 @@ const schema = new mongoose.Schema(
   { timestamps: true }
 );
 
-schema.pre("validate", function () {
-  this.slug = slug(this.name);
-});
-
 export const Product = mongoose.model("products", schema);
