@@ -9,7 +9,7 @@ async function create(req, res, next) {
 
     await product.save();
 
-    res.json(product);
+    return res.json(product);
   } catch (err) {
     if (err.code === 11000) {
       return next(
@@ -37,7 +37,7 @@ async function find(req, res, next) {
   return res.json(product);
 }
 
-async function list(req, res, next) {
+async function list(req, res) {
   const products = await Product.find();
   return res.json(products);
 }

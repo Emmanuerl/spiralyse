@@ -38,8 +38,8 @@ export function validate(schema, context = "body") {
           `Your request ${
             context === "body" ? "body is" : "parameters are"
           } invalid`,
-          parseJoiError(err)
-        )
+          parseJoiError(err),
+        ),
       );
     }
   };

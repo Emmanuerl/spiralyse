@@ -6,8 +6,8 @@ export function routeNotFoundHandler(req, res, next) {
   return next(
     new ApplicationError(
       404,
-      `[${req.method.toUpperCase()}] ${req.path} does not exist`
-    )
+      `[${req.method.toUpperCase()}] ${req.path} does not exist`,
+    ),
   );
 }
 

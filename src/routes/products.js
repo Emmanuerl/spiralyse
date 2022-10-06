@@ -1,10 +1,10 @@
+import express from "express";
 import {
   isCreateProductDTO,
   isProductID,
   isUpdateProducDTO,
 } from "../middlewares";
 
-import express from "express";
 import { productController } from "../controllers";
 import { validate } from "../utilities";
 
@@ -16,16 +16,16 @@ productRoute.get("/", productController.list);
 productRoute.get(
   "/:id",
   validate(isProductID, "params"),
-  productController.find
+  productController.find,
 );
 productRoute.put(
   "/:id",
   validate(isProductID, "params"),
   validate(isUpdateProducDTO),
-  productController.update
+  productController.update,
 );
 productRoute.delete(
   "/:id",
   validate(isProductID, "params"),
-  productController.destroy
+  productController.destroy,
 );
