@@ -1,4 +1,4 @@
-# Tutors Attendance
+# Spiralyze
 
 a simple appliation for managing attendance for tutors
 
@@ -9,7 +9,7 @@ a simple appliation for managing attendance for tutors
 $ git clone <repo_url>
 
 # cd into path
-$ cd tutors-attendance
+$ cd spiralyze
 
 # setup env config
 # this only works in unix shells (sh, bash, git bash, e.t.c)
@@ -28,12 +28,3 @@ $ npm run watch                     |  $ npm run start:dev
 # run build                         |  run server
 $ npm run buld                      |  $ npm run start
 ```
-
-### SDD
-
-![alt text](https://github.com/DSC-Unilag/tutors-attendance/blob/main/documentation/sdd.jpg?raw=true)
-
-### Contributors
-
-- [Chukwuemeka Chukwurah](https://github.com/emmanuerl)
-- [Kolawole Temitope](https://github.com/kolabdull)
