@@ -44,7 +44,9 @@ async function list(req, res) {
 
 async function update(req, res, next) {
   try {
-    const product = await Product.findByIdAndUpdate(req.params.id, req.body);
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
     if (!product) {
       return next(
         new ApplicationError(
