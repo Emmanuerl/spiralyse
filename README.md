@@ -8,8 +8,9 @@ Image Gallery can be found [here](https://spiralyze.herokuapp.com/)
 
 Base URl : https://spiralyze.herokuapp.com/
 
-```json
 - POST /api/v1/product - create product
+
+```json
 {
   "name": "string | required | unique",
   "price": "number | required | positive | min:0"
