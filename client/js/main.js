@@ -12,7 +12,7 @@ function setImages(urls) {
   let html = "";
   for (const url of urls) {
     html += `
-    <div class="item selfie col-md-4 col-6 col-sm">
+    <div class="item selfie col-md-4 col-12">
       <img class="img-fluid img-responsive" src="${url}" alt="" height="10px">
     </div>`;
   }

@@ -1,5 +1,47 @@
 # Spiralyze
 
+## API DOCUMENTATION
+
+Base URl : https://spiralyze.herokuapp.com/
+
+```json
+- POST /api/v1/product - create product
+{
+  "name": "string | required | unique",
+  "price": "number | required | positive | min:0"
+}
+```
+
+- GET /api/v1/products - list all productrs
+
+```
+request payload (body)
+{}
+```
+
+- GET /api/v1/products/{id} - get single product
+
+```
+request payload (body)
+{}
+```
+
+- PUT /api/v1/products/{id} - update product
+
+```json
+{
+  "name": "string | optional | unique",
+  "price": "number | optional | positive | min:0"
+}
+```
+
+- DELETE /api/v1/products/{id} - delete product
+
+```json
+request payload (body)
+{}
+```
+
 ### How to setup locally
 
 ```sh
