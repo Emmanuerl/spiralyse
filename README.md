@@ -1,7 +1,5 @@
 # Spiralyze
 
-a simple appliation for managing attendance for tutors
-
 ### How to setup locally
 
 ```sh

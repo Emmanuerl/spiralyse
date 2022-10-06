@@ -66,7 +66,7 @@ async function update(req, res, next) {
   }
 }
 
-async function detroy(req, res, next) {
+async function destroy(req, res, next) {
   const product = await Product.findByIdAndDelete(req.params.id);
   if (!product) {
     return next(
@@ -84,5 +84,5 @@ export const productController = {
   find,
   list,
   update,
-  detroy,
+  destroy,
 };

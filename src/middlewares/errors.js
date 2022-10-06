@@ -4,7 +4,10 @@ import { ApplicationError, DataValidationError } from "../utilities";
 
 export function routeNotFoundHandler(req, res, next) {
   return next(
-    new ApplicationError(404, `Baba this route ${req.path} no dey this app 💀`)
+    new ApplicationError(
+      404,
+      `[${req.method.toUpperCase()}] ${req.path} does not exist`
+    )
   );
 }
 

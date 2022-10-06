@@ -27,5 +27,5 @@ productRoute.put(
 productRoute.delete(
   "/:id",
   validate(isProductID, "params"),
-  productController.detroy
+  productController.destroy
 );
